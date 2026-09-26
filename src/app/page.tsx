@@ -202,24 +202,32 @@ export default function Home() {
               Karya Desain Poster 🎨
             </h3>
             
-            {/* Grid Tempat Poster (Dibuat vertikal aspect ratio 3:4) */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {/* Tempat Poster 1 */}
-              <div className="aspect-[3/4] bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
-                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity text-center">+ POSTER 1</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              {/* Poster Card 1 */}
+              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col justify-between">
+                <div>
+                  <span className="bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest mb-3 inline-block">Graphic Design</span>
+                  <h4 className="font-black text-2xl uppercase mb-1">Koleksi Desain Poster</h4>
+                  <p className="font-bold text-gray-600 mb-6">POSTER ACARA & KEPANITIAAN</p>
+                </div>
+                <button onClick={() => alert('Link ke Google Drive / Portofolio luar belum diatur!')} className="w-full bg-[#FFD93D] border-4 border-black py-3 font-black text-lg uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-colors active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1">
+                  Lihat Poster &rarr;
+                </button>
               </div>
-              {/* Tempat Poster 2 */}
-              <div className="aspect-[3/4] bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
-                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity text-center">+ POSTER 2</span>
+
+              {/* Poster Card 2 */}
+              <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col justify-between">
+                <div>
+                  <span className="bg-black text-white text-xs font-bold px-2 py-1 uppercase tracking-widest mb-3 inline-block">Social Media</span>
+                  <h4 className="font-black text-2xl uppercase mb-1">Konten Feed & Visual</h4>
+                  <p className="font-bold text-gray-600 mb-6">DESAIN PROMOSI & MEDIA SOSIAL KLIEN</p>
+                </div>
+                <button onClick={() => alert('Link ke Google Drive / Portofolio luar belum diatur!')} className="w-full bg-[#B57EDC] border-4 border-black py-3 font-black text-lg uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-colors active:shadow-[0px_0px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1">
+                  Lihat Desain &rarr;
+                </button>
               </div>
-              {/* Tempat Poster 3 */}
-              <div className="aspect-[3/4] bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
-                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity text-center">+ POSTER 3</span>
-              </div>
-              {/* Tempat Poster 4 */}
-              <div className="aspect-[3/4] bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
-                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity text-center">+ POSTER 4</span>
-              </div>
+
             </div>
           </motion.div>
 
