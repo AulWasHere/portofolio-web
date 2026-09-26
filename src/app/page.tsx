@@ -31,7 +31,7 @@ export default function Home() {
         {/* Header */}
         <header className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end border-b-8 border-black pb-4">
           <div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase" style={{ textShadow: "4px 4px 0px #FFD93D" }}>
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase" style={{ textShadow: "4px 4px 0px #FFD93D" }}>
               Aulia Rumi Siregar
             </h1>
             <p className="text-lg md:text-xl font-bold mt-4 bg-black text-white inline-block px-4 py-2 -rotate-1 shadow-[4px_4px_0px_0px_#FF6B6B]">
@@ -76,12 +76,12 @@ export default function Home() {
             <h3 className="font-black text-2xl uppercase mb-6 bg-white border-4 border-black inline-block px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-2 w-max">
               Kontak & Info
             </h3>
-            <div className="space-y-4 font-black text-lg">
-              <a href="mailto:aulwashere@gmail.com" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform w-max"><span className="text-3xl bg-white rounded-full p-1 border-2 border-black">📧</span> aulwashere@gmail.com</a>
-              <a href="https://wa.me/6281269162524" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform w-max"><span className="text-3xl bg-white rounded-full p-1 border-2 border-black">💬</span> +62 812-6916-2524</a>
-              <a href="https://github.com/AulWasHere" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform w-max"><span className="text-3xl bg-white rounded-full p-1 border-2 border-black">👾</span> github.com/AulWasHere</a>
-              <p className="flex items-center gap-3"><span className="text-3xl bg-white rounded-full p-1 border-2 border-black">📍</span> Condongcatur, Sleman, DIY</p>
-              <p className="flex items-center gap-3"><span className="text-3xl bg-white rounded-full p-1 border-2 border-black">🎂</span> Medan, 14 Desember 2004</p>
+            <div className="space-y-4 font-black text-base md:text-lg">
+              <a href="mailto:aulwashere@gmail.com" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform break-all"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">📧</span> aulwashere@gmail.com</a>
+              <a href="https://wa.me/6281269162524" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">💬</span> +62 812-6916-2524</a>
+              <a href="https://github.com/AulWasHere" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform break-all"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">👾</span> github.com/AulWasHere</a>
+              <p className="flex items-center gap-3"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">📍</span> Condongcatur, Sleman</p>
+              <p className="flex items-center gap-3"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">🎂</span> Medan, 14 Des 2004</p>
             </div>
           </motion.div>
 
@@ -164,7 +164,7 @@ export default function Home() {
 
           {/* Box 6: Proyek Web (Orange) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className={`col-span-1 md:col-span-4 bg-[#FF9F29] flex flex-col ${boxClass}`}>
-            <h3 className="font-black text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 w-max">
+            <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 self-start">
               Proyek & Case Study
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -198,7 +198,7 @@ export default function Home() {
 
           {/* Box 7: Dokumentasi & Galeri (Pink) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className={`col-span-1 md:col-span-4 bg-[#FF9CEE] flex flex-col ${boxClass}`}>
-            <h3 className="font-black text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 w-max">
+            <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
               Galeri & Dokumentasi 📸
             </h3>
             
