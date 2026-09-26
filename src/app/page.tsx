@@ -201,7 +201,7 @@ export default function Home() {
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 self-start">
               Desain Poster & Grafis 🎨
             </h3>
-            <div className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6">
+            <div className="columns-2 md:columns-4 gap-4 space-y-4">
               {['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png','/poster/poster-8.png','/poster/poster-9.png','/poster/poster-10.png','/poster/poster-11.png','/poster/poster-12.png','/poster/poster-13.png'].map((src, i) => (
                 <div key={i} className="break-inside-avoid">
                   <img src={src} loading="lazy" alt={`Poster ${i+1}`} className="w-full h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer bg-white" />
@@ -215,7 +215,7 @@ export default function Home() {
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
               Konten Feed & Visual 📱
             </h3>
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+            <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4">
               {['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-8.gif','/sosmed/sosmed-9.gif','/sosmed/sosmed-10.gif','/sosmed/sosmed-11.gif','/sosmed/sosmed-12.gif','/sosmed/sosmed-13.gif','/sosmed/sosmed-14.png','/sosmed/sosmed-15.png'].map((src, i) => (
                 <div key={i} className="break-inside-avoid">
                   <img src={src} loading="lazy" alt={`Sosmed ${i+1}`} className="w-full h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer bg-white" />
