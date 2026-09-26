@@ -199,7 +199,7 @@ export default function Home() {
           {/* Box 7: Desain Poster (Cyan) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.55 }} className={`col-span-1 md:col-span-4 bg-[#4ECDC4] flex flex-col ${boxClass}`}>
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 self-start">
-              Desain Poster & Grafis 🎨
+              Desain Poster & Grafis
             </h3>
             <div className="columns-2 md:columns-4 gap-4 space-y-4">
               {['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png','/poster/poster-8.png','/poster/poster-9.png','/poster/poster-10.png','/poster/poster-11.png','/poster/poster-12.png','/poster/poster-13.png'].map((src, i) => (
@@ -213,7 +213,7 @@ export default function Home() {
           {/* Box 7.5: Desain Sosmed (Light Yellow) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.58 }} className={`col-span-1 md:col-span-4 bg-[#FCE38A] flex flex-col ${boxClass}`}>
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
-              Konten Feed & Visual 📱
+              Konten Feed & Visual
             </h3>
             <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4">
               {['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-8.gif','/sosmed/sosmed-9.gif','/sosmed/sosmed-10.gif','/sosmed/sosmed-11.gif','/sosmed/sosmed-12.gif','/sosmed/sosmed-13.gif','/sosmed/sosmed-14.png','/sosmed/sosmed-15.png'].map((src, i) => (
