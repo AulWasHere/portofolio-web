@@ -212,7 +212,7 @@ export default function Home() {
 
               {/* Tempat Foto 2 */}
               <div className="aspect-square bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer">
-                <Image src="/doc2.jpg" alt="Dokumentasi Aulia 2" fill className="object-cover object-center group-hover:scale-110 transition-transform duration-300" />
+                <Image src="/doc2.jpg" alt="Dokumentasi Aulia 2" fill className="object-cover object-bottom group-hover:scale-110 transition-transform duration-300" />
               </div>
 
               {/* Tempat Foto 3 */}
