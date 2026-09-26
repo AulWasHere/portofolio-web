@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             
             <p className="font-bold text-base md:text-lg leading-relaxed pointer-events-none mb-6">
-              Mahasiswa IT yang fleksibel, komunikatif, dan fast response. Saya menjembatani kemampuan <span className="bg-[#4D96FF] text-white px-1">problem solving</span> teknis dengan kreativitas di bidang customer service dan media sosial. Dengan portofolio lintas bidang—mulai dari desain grafis, pengeditan video, public speaking, hingga administrasi data, saya siap membawa energi positif, ketelitian, dan solusi digital yang inovatif untuk membantu audiens maupun brand Anda berkembang.
+              Mahasiswa IT yang fleksibel, komunikatif, dan fast response. Saya menjembatani kemampuan <span className="bg-[#4D96FF] text-white px-1">problem solving</span> teknis dengan kreativitas di bidang customer service dan media sosial. Dengan portofolio lintas bidang seperti desain grafis, pengeditan video, public speaking, hingga administrasi data, saya siap membawa energi positif, ketelitian, dan solusi digital yang inovatif untuk membantu audiens maupun brand Anda berkembang.
             </p>
             <div>
               <button 
@@ -113,7 +113,7 @@ export default function Home() {
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:rotate-1 transition-transform">
                 <h4 className="font-black text-xl uppercase">Wakil Ketua (OSIS)</h4>
                 <p className="font-bold text-sm text-white bg-black inline-block px-2 py-1 mb-2">SMA Panca Budi Medan</p>
-                <p className="font-bold text-sm leading-snug">Membantu ketua mengoordinasikan teman-teman pengurus untuk menjalankan berbagai acara sekolah. Belajar banyak tentang kerja sama tim dan cara mengatasi kendala dadakan di lapangan.</p>
+                <p className="font-bold text-sm leading-snug">Membantu ketua mengkoordinasikan teman-teman pengurus untuk menjalankan berbagai acara sekolah. Belajar banyak tentang kerja sama tim dan cara mengatasi kendala dadakan di lapangan.</p>
               </div>
             </div>
           </motion.div>
