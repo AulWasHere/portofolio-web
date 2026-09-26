@@ -58,7 +58,7 @@ export default function Home() {
               </div>
             </div>
             
-            <p className="font-bold text-base md:text-lg leading-relaxed pointer-events-none mb-6">
+            <p className="font-bold text-base md:text-lg leading-relaxed pointer-events-none mb-6 text-justify">
               Mahasiswa IT yang fleksibel, komunikatif, dan fast response. Saya menjembatani kemampuan <span className="bg-[#4D96FF] text-white px-1">problem solving</span> teknis dengan kreativitas di bidang customer service dan media sosial. Dengan portofolio lintas bidang seperti desain grafis, pengeditan video, public speaking, hingga administrasi data, saya siap membawa energi positif, ketelitian, dan solusi digital yang inovatif untuk membantu audiens maupun brand Anda berkembang.
             </p>
             <div>
@@ -95,25 +95,25 @@ export default function Home() {
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-rotate-1 transition-transform">
                 <h4 className="font-black text-xl uppercase">Graphic Design Intern</h4>
                 <p className="font-bold text-sm text-white bg-black inline-block px-2 py-1 mb-2">Unteyo Journey (Okt - Des 2024)</p>
-                <p className="font-bold text-sm leading-snug">Membantu pembuatan aset visual dan editan video untuk kebutuhan media sosial klien. Terbiasa bekerja dengan deadline cepat dan teliti menyesuaikan desain dengan brief yang diberikan.</p>
+                <p className="font-bold text-sm leading-snug text-justify">Membantu pembuatan aset visual dan editan video untuk kebutuhan media sosial klien. Terbiasa bekerja dengan deadline cepat dan teliti menyesuaikan desain dengan brief yang diberikan.</p>
               </div>
               
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:rotate-1 transition-transform">
                 <h4 className="font-black text-xl uppercase">Moderator Ceremony</h4>
                 <p className="font-bold text-sm text-white bg-black inline-block px-2 py-1 mb-2">Event Jamming Football (2023)</p>
-                <p className="font-bold text-sm leading-snug">Memandu jalannya acara dan menghidupkan suasana agar audiens tetap antusias. Bertanggung jawab menjaga alur rundown berjalan lancar dan asik dari awal hingga akhir.</p>
+                <p className="font-bold text-sm leading-snug text-justify">Memandu jalannya acara dan menghidupkan suasana agar audiens tetap antusias. Bertanggung jawab menjaga alur rundown berjalan lancar dan asik dari awal hingga akhir.</p>
               </div>
 
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-rotate-1 transition-transform">
                 <h4 className="font-black text-xl uppercase">Sekretaris</h4>
                 <p className="font-bold text-sm text-white bg-black inline-block px-2 py-1 mb-2">Meet and Greet 4 (Nov 2022)</p>
-                <p className="font-bold text-sm leading-snug">Mengurus pendataan, surat-menyurat, dan kebutuhan administrasi kepanitiaan. Terbiasa merespons informasi dengan cepat dan saling bantu menyelesaikan kendala teknis saat hari-H acara.</p>
+                <p className="font-bold text-sm leading-snug text-justify">Mengurus pendataan, surat-menyurat, dan kebutuhan administrasi kepanitiaan. Terbiasa merespons informasi dengan cepat dan saling bantu menyelesaikan kendala teknis saat hari-H acara.</p>
               </div>
 
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:rotate-1 transition-transform">
                 <h4 className="font-black text-xl uppercase">Wakil Ketua (OSIS)</h4>
                 <p className="font-bold text-sm text-white bg-black inline-block px-2 py-1 mb-2">SMA Panca Budi Medan</p>
-                <p className="font-bold text-sm leading-snug">Membantu ketua mengkoordinasikan teman-teman pengurus untuk menjalankan berbagai acara sekolah. Belajar banyak tentang kerja sama tim dan cara mengatasi kendala dadakan di lapangan.</p>
+                <p className="font-bold text-sm leading-snug text-justify">Membantu ketua mengkoordinasikan teman-teman pengurus untuk menjalankan berbagai acara sekolah. Belajar banyak tentang kerja sama tim dan cara mengatasi kendala dadakan di lapangan.</p>
               </div>
             </div>
           </motion.div>
@@ -127,12 +127,12 @@ export default function Home() {
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="font-black text-lg md:text-xl uppercase">S1 Informatika</h4>
                 <p className="font-black text-sm mb-2 border-b-2 border-black pb-1">Universitas Teknologi Yogyakarta (2023 - Sekarang)</p>
-                <p className="font-bold text-sm">Fokus belajar manajemen data, sistem IT dasar, dan melatih logika problem solving untuk dunia kerja digital.</p>
+                <p className="font-bold text-sm text-justify">Fokus belajar manajemen data, sistem IT dasar, dan melatih logika problem solving untuk dunia kerja digital.</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="font-black text-lg md:text-xl uppercase">Jurusan IPA</h4>
                 <p className="font-black text-sm mb-2 border-b-2 border-black pb-1">SMA Panca Budi Medan (2021 - 2023)</p>
-                <p className="font-bold text-sm">Aktif berorganisasi dan terjun di kepanitiaan untuk membangun kedisiplinan serta teamwork.</p>
+                <p className="font-bold text-sm text-justify">Aktif berorganisasi dan terjun di kepanitiaan untuk membangun kedisiplinan serta teamwork.</p>
               </div>
             </div>
           </motion.div>
