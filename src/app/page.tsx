@@ -196,6 +196,38 @@ export default function Home() {
             </div>
           </motion.div>
 
+          {/* Box 7: Dokumentasi & Galeri (Pink) */}
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className={`col-span-1 md:col-span-4 bg-[#FF9CEE] flex flex-col ${boxClass}`}>
+            <h3 className="font-black text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 w-max">
+              Galeri & Dokumentasi 📸
+            </h3>
+            
+            {/* Tempat Foto */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              
+              {/* Tempat Foto 1 */}
+              <div className="aspect-square bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
+                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity">+ FOTO 1</span>
+              </div>
+
+              {/* Tempat Foto 2 */}
+              <div className="aspect-square bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
+                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity">+ FOTO 2</span>
+              </div>
+
+              {/* Tempat Foto 3 */}
+              <div className="aspect-square bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
+                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity">+ FOTO 3</span>
+              </div>
+
+              {/* Tempat Foto 4 */}
+              <div className="aspect-square bg-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden relative group cursor-pointer flex items-center justify-center">
+                <span className="font-black text-xl opacity-30 group-hover:opacity-100 transition-opacity">+ FOTO 4</span>
+              </div>
+
+            </div>
+          </motion.div>
+
         </div>
       </div>
     </main>
