@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import DriftWall from "@/components/DriftWall";
 
 export default function Home() {
   // Fitur Anti-Copy (Mematikan Klik Kanan)
@@ -193,6 +194,28 @@ export default function Home() {
                 </button>
               </div>
 
+            </div>
+          </motion.div>
+
+          {/* Box 6.5: Interactive Showcase */}
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.52 }} className={`col-span-1 md:col-span-4 bg-[#FF6B6B] flex flex-col ${boxClass}`}>
+            <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
+              Highlight Karya (Interaktif) 🚀
+            </h3>
+            <div className="w-full border-4 border-black overflow-hidden bg-black relative" style={{ height: 600 }}>
+              <DriftWall
+                items={[
+                  ...['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png'].map(src => ({ image: src, title: 'Karya Poster' })),
+                  ...['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-15.png'].map(src => ({ image: src, title: 'Karya Sosmed' }))
+                ]}
+                columns={4}
+                tileWidth={180}
+                tileHeight={240}
+                gap={18}
+                speed={25}
+                direction="up"
+                overlayColor="#000000"
+              />
             </div>
           </motion.div>
 
