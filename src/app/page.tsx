@@ -28,10 +28,10 @@ export default function Home() {
   const scrollPoster = (dir: 'left' | 'right') => {
     posterScrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' });
   };
-  const posterItems = ['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png','/poster/poster-8.png','/poster/poster-9.png','/poster/poster-10.png','/poster/poster-11.png','/poster/poster-12.png','/poster/poster-13.png'];
+  const posterItems = ['/poster/10.png','/poster/21.5 crew.png','/poster/Aulia Rumi Siregar_Pandangan Al-Quran_Mengelola Waktu dan prioritas.png','/poster/AWAY MADURA.png','/poster/AWAYDAYS TANGERANG.png','/poster/bagaimana jika 2.jpg','/poster/belongs old.png','/poster/CHAPTER 1 BLNKG.png','/poster/CHAPTER 1 DPN.png','/poster/CHOOSE YOU.png','/poster/DS ATAS BAWAH.png','/poster/elang jawa selalu.png','/poster/FOREVER CHANTING FOREVER STANDING.png','/poster/GONZALES.png','/poster/i\'m ready.png','/poster/IBU KOTA PERIANGAN.png','/poster/kaos putih lemon.png','/poster/kaos putih.png','/poster/KEMEJA PDL HITAM UTY.png','/poster/KOLASE DIGDAYASEMBADA - MENCINTAI KOTA DAN KLUB TANPA SYARAT.png','/poster/MENOLAK LUPA TRAGEDI 1.png','/poster/MF ULTRAS.png','/poster/NAMOY NOBAR IND v ARB.png','/poster/POSTER RETRO CAMPING.png','/poster/POSTINGAN 12 TV RUSAK.png','/poster/POSTINGAN 13 GAGAK.png','/poster/POSTINGAN 19 BUNGA.png','/poster/POSTINGAN 21 SAKIT KEPALA.png','/poster/PRICELIST FREE FIRE.png','/poster/PSMS IS DOPAMINE.png','/poster/SENT TO ME FROM HEAVEN SALLY CINNAMON.png','/poster/snapgram 2.png','/poster/snapgram 3.png','/poster/STIKER 3.png','/poster/STIKER AWAY HITAM.png','/poster/SVC_Aulia Rumi Siregar_Katalisator Menuju Indonesia Emas 2045 Melalui Era Digitalisasi..png','/poster/TES LOGO 4.png','/poster/TES LOGO 6.png','/poster/wastu 2.png','/poster/wastu 3.png','/poster/YOFALAB DESAIN 1.png','/poster/YOFALAB DESAIN 2.png','/poster/YOFALAB DESAIN 3.png'];
 
   // Sosmed Stack Card Carousel
-  const sosmedItems = ['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-8.gif','/sosmed/sosmed-9.gif','/sosmed/sosmed-10.gif','/sosmed/sosmed-11.gif','/sosmed/sosmed-12.gif','/sosmed/sosmed-13.gif','/sosmed/sosmed-14.png','/sosmed/sosmed-15.png'];
+  const sosmedItems = ['/sosmed/1.png','/sosmed/2.png','/sosmed/3.png','/sosmed/4.png','/sosmed/5.png','/sosmed/a.png','/sosmed/a1.png','/sosmed/a2.png','/sosmed/a3.png','/sosmed/a4.png','/sosmed/a5.png','/sosmed/a6.png','/sosmed/a7.png','/sosmed/a8.png','/sosmed/a9.png','/sosmed/b.png','/sosmed/c.png','/sosmed/d.png','/sosmed/e.png','/sosmed/f.png','/sosmed/feed-ig-bang-farros_01.jpg','/sosmed/g.png','/sosmed/h.png','/sosmed/i.png','/sosmed/j.png','/sosmed/k.png','/sosmed/l.png','/sosmed/m.png','/sosmed/NAMOY NOBAR IND v ARB.png','/sosmed/o.png','/sosmed/p.png','/sosmed/q.png','/sosmed/r.png','/sosmed/s.png','/sosmed/t.png','/sosmed/u.png','/sosmed/v.png','/sosmed/VOL 1.png','/sosmed/w.png','/sosmed/x.png','/sosmed/y.png','/sosmed/z.png'];
   const [sosmedIndex, setSosmedIndex] = useState(0);
   const nextSosmed = () => setSosmedIndex(i => (i + 1) % sosmedItems.length);
   const prevSosmed = () => setSosmedIndex(i => (i - 1 + sosmedItems.length) % sosmedItems.length);
@@ -355,10 +355,9 @@ export default function Home() {
 
               {/* Controls & Info */}
               <div className="flex flex-col gap-4 flex-1">
-                <p className="font-black text-lg uppercase">
+                <p className="font-black text-lg uppercase bg-white border-2 border-black inline-block px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] self-start">
                   {sosmedIndex + 1} / {sosmedItems.length}
                 </p>
-                <p className="font-bold text-sm text-gray-700 uppercase">Klik gambar atau tekan tombol untuk melihat karya berikutnya</p>
                 <div className="flex gap-3">
                   <button
                     onClick={prevSosmed}
