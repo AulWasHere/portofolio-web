@@ -1,9 +1,13 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import DriftWall from "@/components/DriftWall";
+import ClickSpark from "@/components/ClickSpark";
+import FoldText from "@/components/FoldText";
+import { SiGooglesheets } from "react-icons/si";
+import { FaScissors, FaFilm, FaPalette, FaImage, FaVectorSquare, FaTable } from "react-icons/fa6";
+import ShapeGrid from "@/components/ShapeGrid";
 
 export default function Home() {
   // Fitur Anti-Copy (Mematikan Klik Kanan)
@@ -19,9 +23,44 @@ export default function Home() {
 
   const boxClass = "border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 rounded-2xl p-6 md:p-8 relative overflow-hidden z-10";
 
+  // Poster Horizontal Carousel
+  const posterScrollRef = useRef<HTMLDivElement>(null);
+  const scrollPoster = (dir: 'left' | 'right') => {
+    posterScrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' });
+  };
+  const posterItems = ['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png','/poster/poster-8.png','/poster/poster-9.png','/poster/poster-10.png','/poster/poster-11.png','/poster/poster-12.png','/poster/poster-13.png'];
+
+  // Sosmed Stack Card Carousel
+  const sosmedItems = ['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-8.gif','/sosmed/sosmed-9.gif','/sosmed/sosmed-10.gif','/sosmed/sosmed-11.gif','/sosmed/sosmed-12.gif','/sosmed/sosmed-13.gif','/sosmed/sosmed-14.png','/sosmed/sosmed-15.png'];
+  const [sosmedIndex, setSosmedIndex] = useState(0);
+  const nextSosmed = () => setSosmedIndex(i => (i + 1) % sosmedItems.length);
+  const prevSosmed = () => setSosmedIndex(i => (i - 1 + sosmedItems.length) % sosmedItems.length);
+
   return (
-    <main className="min-h-screen bg-[#FDF5E6] text-black p-4 md:p-10 font-sans select-none overflow-hidden relative">
-      
+    <ClickSpark
+      sparkColor="#FF6B6B"
+      sparkSize={14}
+      sparkRadius={28}
+      sparkCount={10}
+      duration={500}
+      easing="ease-out"
+      extraScale={1.2}
+    >
+      <main className="min-h-screen bg-[#FDF5E6] text-black p-4 md:p-10 font-sans select-none overflow-hidden relative">
+
+      {/* ShapeGrid Background */}
+      <div className="fixed inset-0 pointer-events-none" style={{ opacity: 0.12, zIndex: 0 }}>
+        <ShapeGrid
+          direction="diagonal"
+          speed={0.4}
+          squareSize={50}
+          borderColor="#000000"
+          hoverFillColor="#FFD93D"
+          shape="square"
+          hoverTrailAmount={3}
+        />
+      </div>
+
       {/* Background Ornamen Melayang */}
       <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 20, ease: "linear" }} className="absolute top-10 left-10 w-24 h-24 bg-[#FF9F29] rounded-full border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] opacity-80" />
       <motion.div animate={{ y: [0, -30, 0] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute bottom-10 right-10 w-32 h-32 bg-[#FF6B6B] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] opacity-80 rotate-12" />
@@ -32,8 +71,21 @@ export default function Home() {
         {/* Header */}
         <header className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end border-b-8 border-black pb-4">
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase" style={{ textShadow: "4px 4px 0px #FFD93D" }}>
-              Aulia Rumi Siregar
+            <h1 className="font-black tracking-tighter uppercase" style={{ textShadow: "4px 4px 0px #FFD93D" }}>
+              <FoldText
+                text="Aulia Rumi Siregar"
+                splitBy="char"
+                hinge="top"
+                trigger="mount"
+                duration={1.1}
+                stagger={0.08}
+                ease="power2.out"
+                perspective={800}
+                creaseShading={0.5}
+                fontSize="clamp(2rem, 7vw, 4.5rem)"
+                fontWeight={900}
+                color="#000000"
+              />
             </h1>
             <p className="text-lg md:text-xl font-bold mt-4 bg-black text-white inline-block px-4 py-2 -rotate-1 shadow-[4px_4px_0px_0px_#FF6B6B]">
               Informatics Student & Creative
@@ -78,11 +130,26 @@ export default function Home() {
               Kontak & Info
             </h3>
             <div className="space-y-4 font-black text-base md:text-lg">
-              <a href="mailto:aulwashere@gmail.com" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform break-all"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">📧</span> aulwashere@gmail.com</a>
-              <a href="https://wa.me/6281269162524" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">💬</span> +62 812-6916-2524</a>
-              <a href="https://github.com/AulWasHere" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:underline hover:translate-x-2 transition-transform break-all"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">👾</span> github.com/AulWasHere</a>
-              <p className="flex items-center gap-3"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">📍</span> Condongcatur, Sleman</p>
-              <p className="flex items-center gap-3"><span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0">🎂</span> Medan, 14 Des 2004</p>
+              <a href="mailto:aulwashere@gmail.com" className="group flex items-center gap-3 hover:translate-x-2 transition-transform break-all no-underline">
+                <span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0 flex items-center justify-center">📧</span> 
+                <span className="group-hover:underline">aulwashere@gmail.com</span>
+              </a>
+              <a href="https://wa.me/6281269162524" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 hover:translate-x-2 transition-transform no-underline">
+                <span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0 flex items-center justify-center">💬</span> 
+                <span className="group-hover:underline">+62 812-6916-2524</span>
+              </a>
+              <a href="https://github.com/AulWasHere" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 hover:translate-x-2 transition-transform break-all no-underline">
+                <span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0 flex items-center justify-center">👾</span> 
+                <span className="group-hover:underline">github.com/AulWasHere</span>
+              </a>
+              <p className="flex items-center gap-3">
+                <span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0 flex items-center justify-center">📍</span> 
+                <span>Condongcatur, Sleman</span>
+              </p>
+              <p className="flex items-center gap-3">
+                <span className="text-2xl md:text-3xl bg-white rounded-full p-1 border-2 border-black shrink-0 flex items-center justify-center">🎂</span> 
+                <span>Medan, 14 Des 2004</span>
+              </p>
             </div>
           </motion.div>
 
@@ -147,8 +214,18 @@ export default function Home() {
             <div className="mb-6">
               <p className="font-black uppercase mb-3 bg-black text-white inline-block px-2">Hard Skills 💻</p>
               <div className="flex flex-wrap gap-2">
-                {['CapCut', 'Premiere Pro', 'Canva', 'Photoshop', 'Illustrator', 'Excel', 'Spreadsheet'].map(skill => (
-                  <span key={skill} className="bg-white border-2 border-black px-3 py-1 font-black text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">{skill}</span>
+                {[
+                  { label: 'CapCut', icon: <FaScissors size={14} color="#000" /> },
+                  { label: 'Premiere Pro', icon: <FaFilm size={14} color="#9999FF" /> },
+                  { label: 'Canva', icon: <FaPalette size={14} color="#00C4CC" /> },
+                  { label: 'Photoshop', icon: <FaImage size={14} color="#31A8FF" /> },
+                  { label: 'Illustrator', icon: <FaVectorSquare size={14} color="#FF9A00" /> },
+                  { label: 'Excel', icon: <FaTable size={14} color="#217346" /> },
+                  { label: 'Google Sheets', icon: <SiGooglesheets size={14} color="#34A853" /> },
+                ].map(({ label, icon }) => (
+                  <span key={label} className="bg-white border-2 border-black px-3 py-1 font-black text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2">
+                    {icon} {label}
+                  </span>
                 ))}
               </div>
             </div>
@@ -197,53 +274,106 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Box 6.5: Interactive Showcase */}
-          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.52 }} className={`col-span-1 md:col-span-4 bg-[#FF6B6B] flex flex-col ${boxClass}`}>
-            <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
-              Highlight Karya (Interaktif) 🚀
-            </h3>
-            <div className="w-full border-4 border-black overflow-hidden bg-black relative" style={{ height: 600 }}>
-              <DriftWall
-                items={[
-                  ...['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png'].map(src => ({ image: src, title: 'Karya Poster', href: undefined })),
-                  ...['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-15.png'].map(src => ({ image: src, title: 'Karya Sosmed', href: undefined }))
-                ]}
-                columns={4}
-                tileWidth={180}
-                tileHeight={240}
-                gap={18}
-                speed={25}
-                direction="up"
-                overlayColor="#000000"
-              />
-            </div>
-          </motion.div>
-
-          {/* Box 7: Desain Poster (Cyan) */}
+          {/* Box 7: Desain Poster - Horizontal Snap Carousel (Cyan) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.55 }} className={`col-span-1 md:col-span-4 bg-[#4ECDC4] flex flex-col ${boxClass}`}>
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 self-start">
               Desain Poster & Grafis
             </h3>
-            <div className="columns-2 md:columns-4 gap-4 space-y-4">
-              {['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png','/poster/poster-8.png','/poster/poster-9.png','/poster/poster-10.png','/poster/poster-11.png','/poster/poster-12.png','/poster/poster-13.png'].map((src, i) => (
-                <div key={i} className="break-inside-avoid">
-                  <img src={src} loading="lazy" alt={`Poster ${i+1}`} className="w-full h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer bg-white" />
-                </div>
-              ))}
+
+            {/* Scroll Carousel Container */}
+            <div className="relative">
+              {/* Left Arrow */}
+              <button
+                onClick={() => scrollPoster('left')}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 z-10 w-12 h-12 bg-[#FFD93D] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl flex items-center justify-center hover:bg-black hover:text-white active:shadow-none active:translate-y-0 transition-all"
+              >
+                ←
+              </button>
+
+              {/* Scrollable Track */}
+              <div
+                ref={posterScrollRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth pb-3"
+                style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {posterItems.map((src, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 h-[300px] md:h-[380px] p-2"
+                    style={{ scrollSnapAlign: 'start' }}
+                  >
+                    <img 
+                      src={src} 
+                      alt={`Poster ${i + 1}`} 
+                      loading="lazy" 
+                      className="w-auto h-full object-contain border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all bg-white cursor-pointer" 
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => scrollPoster('right')}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 z-10 w-12 h-12 bg-[#FFD93D] border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl flex items-center justify-center hover:bg-black hover:text-white active:shadow-none active:translate-y-0 transition-all"
+              >
+                →
+              </button>
             </div>
           </motion.div>
 
-          {/* Box 7.5: Desain Sosmed (Light Yellow) */}
+          {/* Box 7.5: Konten Sosmed - Stack Card Carousel (Yellow) */}
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.58 }} className={`col-span-1 md:col-span-4 bg-[#FCE38A] flex flex-col ${boxClass}`}>
             <h3 className="font-black text-2xl md:text-3xl uppercase mb-6 bg-white border-4 border-black inline-block px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-1 self-start">
               Konten Feed & Visual
             </h3>
-            <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4">
-              {['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-8.gif','/sosmed/sosmed-9.gif','/sosmed/sosmed-10.gif','/sosmed/sosmed-11.gif','/sosmed/sosmed-12.gif','/sosmed/sosmed-13.gif','/sosmed/sosmed-14.png','/sosmed/sosmed-15.png'].map((src, i) => (
-                <div key={i} className="break-inside-avoid">
-                  <img src={src} loading="lazy" alt={`Sosmed ${i+1}`} className="w-full h-auto border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all cursor-pointer bg-white" />
+
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Stack Card */}
+              <div className="relative flex-shrink-0 h-[300px] md:h-[400px] flex items-center justify-center w-full md:w-auto p-4">
+                <div className="relative inline-block h-full">
+                  {/* Background stack cards (dekoratif) */}
+                  {[2, 1].map((offset) => (
+                    <div
+                      key={offset}
+                      className="absolute inset-0 bg-white border-4 border-black"
+                      style={{
+                        transform: `rotate(${offset % 2 === 0 ? offset * 2.5 : -offset * 2.5}deg) translate(${offset * 4}px, ${offset * 4}px)`,
+                        zIndex: -offset,
+                      }}
+                    />
+                  ))}
+                  {/* Active card */}
+                  <img
+                    src={sosmedItems[sosmedIndex]}
+                    alt={`Sosmed ${sosmedIndex + 1}`}
+                    className="relative z-10 w-auto h-full object-contain border-4 border-black bg-white cursor-pointer shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all"
+                    onClick={nextSosmed}
+                  />
                 </div>
-              ))}
+              </div>
+
+              {/* Controls & Info */}
+              <div className="flex flex-col gap-4 flex-1">
+                <p className="font-black text-lg uppercase">
+                  {sosmedIndex + 1} / {sosmedItems.length}
+                </p>
+                <p className="font-bold text-sm text-gray-700 uppercase">Klik gambar atau tekan tombol untuk melihat karya berikutnya</p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={prevSosmed}
+                    className="flex-1 bg-white border-4 border-black py-3 font-black text-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white active:shadow-none active:translate-y-1 transition-all"
+                  >
+                    ← Sebelumnya
+                  </button>
+                  <button
+                    onClick={nextSosmed}
+                    className="flex-1 bg-black text-white border-4 border-black py-3 font-black text-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-[#FFD93D] hover:text-black active:shadow-none active:translate-y-1 transition-all"
+                  >
+                    Berikutnya →
+                  </button>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -281,6 +411,7 @@ export default function Home() {
 
         </div>
       </div>
-    </main>
+      </main>
+    </ClickSpark>
   );
 }
