@@ -205,8 +205,8 @@ export default function Home() {
             <div className="w-full border-4 border-black overflow-hidden bg-black relative" style={{ height: 600 }}>
               <DriftWall
                 items={[
-                  ...['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png'].map(src => ({ image: src, title: 'Karya Poster' })),
-                  ...['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-15.png'].map(src => ({ image: src, title: 'Karya Sosmed' }))
+                  ...['/poster/poster-1.png','/poster/poster-2.png','/poster/poster-3.png','/poster/poster-4.png','/poster/poster-5.png','/poster/poster-6.png','/poster/poster-7.png'].map(src => ({ image: src, title: 'Karya Poster', href: undefined })),
+                  ...['/sosmed/sosmed-1.png','/sosmed/sosmed-2.png','/sosmed/sosmed-3.png','/sosmed/sosmed-4.png','/sosmed/sosmed-5.png','/sosmed/sosmed-6.jpg','/sosmed/sosmed-7.jpg','/sosmed/sosmed-15.png'].map(src => ({ image: src, title: 'Karya Sosmed', href: undefined }))
                 ]}
                 columns={4}
                 tileWidth={180}

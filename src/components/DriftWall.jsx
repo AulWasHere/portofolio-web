@@ -1,3 +1,4 @@
+"use client";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import './DriftWall.css';
 
@@ -41,7 +42,7 @@ const DriftWall = ({
   grayscale = false,
   overlayColor = '#060010',
   className = '',
-  style
+  style = {}
 }) => {
   const containerRef = useRef(null);
   const planeRef = useRef(null);
