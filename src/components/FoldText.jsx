@@ -26,6 +26,23 @@ const renderWhitespace = (value, key) =>
     );
   });
 
+/**
+ * @param {Object} props
+ * @param {string} [props.text='Design unfolds']
+ * @param {'word'|'char'|'line'} [props.splitBy='char']
+ * @param {'top'|'bottom'|'left'|'right'} [props.hinge='top']
+ * @param {number} [props.duration=0.65]
+ * @param {number} [props.stagger=0.045]
+ * @param {string} [props.ease='power3.out']
+ * @param {number} [props.perspective=700]
+ * @param {number} [props.creaseShading=0.55]
+ * @param {'mount'|'scroll'} [props.trigger='mount']
+ * @param {number|string} [props.fontSize=80]
+ * @param {number|string} [props.fontWeight=800]
+ * @param {string} [props.color='#f7f2e8']
+ * @param {string} [props.className='']
+ * @param {Object} [props.style={}]
+ */
 const FoldText = ({
   text = 'Design unfolds',
   splitBy = 'char',

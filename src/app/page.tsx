@@ -72,6 +72,7 @@ export default function Home() {
         <header className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end border-b-8 border-black pb-4">
           <div>
             <h1 className="font-black tracking-tighter uppercase" style={{ textShadow: "4px 4px 0px #FFD93D" }}>
+              {/* @ts-ignore: inferred as number but accepts string */}
               <FoldText
                 text="Aulia Rumi Siregar"
                 splitBy="char"
