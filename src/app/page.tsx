@@ -374,6 +374,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Hidden Preloader for Instant Next/Prev */}
+            <div style={{ display: 'none' }}>
+              <img src={sosmedItems[(sosmedIndex + 1) % sosmedItems.length]} alt="preload next" />
+              <img src={sosmedItems[(sosmedIndex - 1 + sosmedItems.length) % sosmedItems.length]} alt="preload prev" />
+            </div>
           </motion.div>
 
           {/* Box 8: Dokumentasi & Galeri (Pink) */}
