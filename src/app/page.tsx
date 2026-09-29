@@ -40,8 +40,29 @@ export default function Home() {
         "Interactive Scheduler: Live countdown timer dan jadwal acara (rundown) interaktif."
       ]
     }
+  ,
+    {
+      id: "kasir",
+      title: "MODERN WEB POS (POINT OF SALE)",
+      tech: "HTML5, Tailwind CSS, Vanilla JS",
+      image: "/website/kasir1.png",
+      images: [
+        "/website/kasir1.png",
+        "/website/kasir2.png",
+        "/website/kasir3.png",
+        "/website/kasir4.png",
+        "/website/kasir5.png"
+      ],
+      desc: "Aplikasi Kasir (Point of Sale) interaktif bergaya modern yang dirancang khusus untuk mempercepat proses transaksi ritel dan UMKM. Dibangun sepenuhnya menggunakan arsitektur Frontend murni (Client-side) yang memanfaatkan LocalStorage API untuk manajemen state, menghasilkan aplikasi yang sangat responsif, ringan, dan dapat berjalan mulus tanpa ketergantungan pada server (Offline-capable).",
+      features: [
+        "Smart Cart & Checkout: Manajemen keranjang belanja real-time dengan kalkulasi otomatis untuk subtotal, hitungan uang kembalian, dan dukungan flow pembayaran QRIS.",
+        "Live Inventory System (CRUD): Dashboard Admin interaktif untuk manajemen katalog produk (Tambah, Edit, Hapus) yang terhubung langsung dengan ketersediaan stok di layar kasir.",
+        "Dynamic Receipt Generator: Pembuatan struk transaksi digital secara dinamis yang mencatat detail pesanan, waktu transaksi (real-time), dan otomatis memformat mata uang (IDR).",
+        "Sales History & Reporting: Pencatatan riwayat seluruh transaksi secara persisten dengan fitur rekapitulasi dan pencetakan laporan penjualan (Print-ready/PDF)."
+      ]
+    }
   ];
-  const [selectedWeb, setSelectedWeb] = useState<typeof webProjects[0] | null>(null);
+    const [selectedWeb, setSelectedWeb] = useState<typeof webProjects[0] | null>(null);
 
   const [sosmedIndex, setSosmedIndex] = useState(0);
   const [showToast, setShowToast] = useState(false);
@@ -353,7 +374,8 @@ export default function Home() {
                   { name: 'Illustrator', file: 'illustrator.png' },
                   { name: 'Word', file: 'word.png' },
                   { name: 'Excel', file: 'excel.png' },
-                  { name: 'Sheets', file: 'sheets.png' }
+                  { name: 'Sheets', file: 'sheets.png' },
+                    { name: 'VS Code', file: 'vscode.png' }
                 ].map(skill => (
                   <div key={skill.name} className="bg-[#ffffff] border-[3px] border-[#000000] shadow-[4px_4px_0px_#000000] hover:-translate-y-1 transition-transform flex flex-col items-center justify-center w-20 h-20 group relative cursor-help">
                     <img src={`/skills/${skill.file}`} alt={skill.name} className="w-10 h-10 object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden'); }} />
@@ -420,6 +442,7 @@ export default function Home() {
         <button onClick={() => setShowToast(false)} className="absolute top-2 right-2 text-white font-black hover:text-[#F1C40F]">&times;</button>
       </div>
 
-    </ClickSpark>
+
+      </ClickSpark>
   );
 }
