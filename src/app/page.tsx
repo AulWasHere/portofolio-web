@@ -375,7 +375,8 @@ export default function Home() {
                   { name: 'Word', file: 'word.png' },
                   { name: 'Excel', file: 'excel.png' },
                   { name: 'Sheets', file: 'sheets.png' },
-                    { name: 'VS Code', file: 'vscode.png' }
+                    { name: 'VS Code', file: 'vscode.png' },
+                    { name: 'Notion', file: 'notion.png' }
                 ].map(skill => (
                   <div key={skill.name} className="bg-[#ffffff] border-[3px] border-[#000000] shadow-[4px_4px_0px_#000000] hover:-translate-y-1 transition-transform flex flex-col items-center justify-center w-20 h-20 group relative cursor-help">
                     <img src={`/skills/${skill.file}`} alt={skill.name} className="w-10 h-10 object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden'); }} />
