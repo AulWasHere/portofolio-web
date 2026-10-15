@@ -164,7 +164,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center items-center">
               <div className="bg-[#ffffff] p-4 border-[3px] border-[#000000] shadow-[6px_6px_0px_#000000] transform -rotate-3 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px]">
                 <div className="w-full aspect-square bg-[#000000] border-[2px] border-[#000000] overflow-hidden relative">
-                  <img src="/profile.png" alt="Aulia Rumi" className="w-full h-full object-cover" />
+                  <img src="/profile.jpeg" alt="Aulia Rumi" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
