@@ -64,6 +64,87 @@ export default function Home() {
   ];
     const [selectedWeb, setSelectedWeb] = useState<typeof webProjects[0] | null>(null);
 
+  const certificates = [
+    {
+      id: "software-engineer",
+      title: "Software Engineer",
+      issuer: "HackerRank",
+      issuerBadge: "bg-[#2A9D8F] text-white",
+      date: "16 Oktober 2026",
+      credentialId: "4EE858C3605B",
+      image: "/sertifikat/cert_software_engineer.png",
+      category: "Software Engineering",
+      desc: "Sertifikasi resmi kompetensi Software Engineer dari HackerRank yang menguji pemecahan masalah (problem solving), struktur data, algoritma, dan logika rekayasa perangkat lunak."
+    },
+    {
+      id: "css-basic",
+      title: "CSS (Basic)",
+      issuer: "HackerRank",
+      issuerBadge: "bg-[#2A9D8F] text-white",
+      date: "17 Oktober 2026",
+      credentialId: "F178C0830A4D",
+      image: "/sertifikat/cert_css.png",
+      category: "Frontend Development",
+      desc: "Sertifikasi pengujian kemahiran dasar CSS dari HackerRank yang mencakup styling antarmuka web, tata letak modern (layouting), cascading, dan responsivitas UI."
+    },
+    {
+      id: "google-marketing",
+      title: "Fundamentals of Digital Marketing",
+      issuer: "Google",
+      issuerBadge: "bg-[#E63946] text-white",
+      date: "16 Oktober 2026",
+      credentialId: "484543004",
+      image: "/sertifikat/cert_google_marketing.png",
+      category: "Digital Marketing",
+      desc: "Akreditasi resmi dari Google Digital Garage mengenai strategi pemasaran digital, analisis audiens, media sosial, dan kampanye digital interaktif."
+    },
+    {
+      id: "ibm-python",
+      title: "Data Analysis with Python",
+      issuer: "IBM / Cognitive Class",
+      issuerBadge: "bg-[#1D3557] text-white",
+      date: "5 Januari 2025",
+      credentialId: "DA0101EN",
+      image: "/sertifikat/cert_ibm_python.png",
+      category: "Data Analytics",
+      desc: "Sertifikasi penyelesaian kursus dari Cognitive Class powered by IBM Developer Skills Network dalam pengolahan dan analisis data menggunakan bahasa pemrograman Python."
+    },
+    {
+      id: "karya-inspirasi",
+      title: "Certified English Learner",
+      issuer: "Karya Inspirasi Indonesia",
+      issuerBadge: "bg-[#F1C40F] text-black",
+      date: "English Training Program",
+      credentialId: "KII / Certified",
+      image: "/sertifikat/cert_karya_inspirasi.png",
+      category: "English Proficiency",
+      desc: ""
+    },
+    {
+      id: "aec-english",
+      title: "General English 1",
+      issuer: "Accelerated English Centre",
+      issuerBadge: "bg-[#2A9D8F] text-white",
+      date: "13 Juni 2023",
+      credentialId: "SK: 420/6476/PLS/2006",
+      image: "/sertifikat/cert_aec_english.png",
+      category: "English Proficiency",
+      desc: ""
+    },
+    {
+      id: "google-workspace",
+      title: "Pelatihan Akun Pembelajaran (32 Jam)",
+      issuer: "Google Workspace for Education",
+      issuerBadge: "bg-[#E63946] text-white",
+      date: "32 Jam Pelatihan",
+      credentialId: "Kemendikbud / Google Workspace",
+      image: "/sertifikat/cert_google_workspace.png",
+      category: "Digital Tools & Productivity",
+      desc: ""
+    }
+  ];
+  const [selectedCert, setSelectedCert] = useState<typeof certificates[0] | null>(null);
+
   const [sosmedIndex, setSosmedIndex] = useState(0);
   const [showToast, setShowToast] = useState(false);
   const handleDownloadCV = () => {
@@ -319,10 +400,27 @@ export default function Home() {
               PENGALAMAN
             </h2>
             <div className="flex flex-col gap-4">
+              <div className="border-[3px] border-[#000000] p-4 bg-[#ffffff] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000000] transition-all relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-[#2A9D8F] text-white text-[10px] font-black uppercase px-2.5 py-0.5 border-b-2 border-l-2 border-black">
+                  AKTIF / SEKARANG
+                </div>
+                <h3 className="font-black text-xl uppercase mb-1 text-[#E63946]">Social Media Officer</h3>
+                <p className="font-bold text-sm bg-black text-white inline-block px-2 py-1 mb-2">Discovery English (Okt 2026 - Sekarang)</p>
+                <p className="font-medium text-[#333333] leading-snug">
+                  Bertanggung jawab dalam memproduksi dan menyunting konten video kreatif (Video Editor), perancangan materi visual &amp; desain grafis promosi, serta merumuskan konsep dan briefing materi konten untuk optimalisasi performa media sosial.
+                </p>
+              </div>
               <div className="border-[3px] border-[#000000] p-4 bg-[#ffffff] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000000] transition-all">
                 <h3 className="font-black text-xl uppercase mb-1 text-[#E63946]">Graphic Design Intern</h3>
                 <p className="font-bold text-sm bg-black text-white inline-block px-2 py-1 mb-2">Unteyo Journey (Okt - Des 2024)</p>
                 <p className="font-medium text-[#333333] leading-snug">Membantu pembuatan aset visual dan editan video untuk kebutuhan media sosial klien. Terbiasa bekerja dengan deadline cepat dan teliti menyesuaikan desain dengan brief yang diberikan.</p>
+              </div>
+              <div className="border-[3px] border-[#000000] p-4 bg-[#ffffff] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000000] transition-all">
+                <h3 className="font-black text-xl uppercase mb-1 text-[#F3722C]">Graphic Designer &amp; Support</h3>
+                <p className="font-bold text-sm bg-black text-white inline-block px-2 py-1 mb-2">Yofalab - Laksamedika (Mar - Mei 2024)</p>
+                <p className="font-medium text-[#333333] leading-snug">
+                  Merancang materi visual promosi dan materi katalog produk alat kesehatan. Membantu penyusunan serta penataan layout dokumen proposal penawaran bisnis untuk kebutuhan operasional B2B.
+                </p>
               </div>
               <div className="border-[3px] border-[#000000] p-4 bg-[#ffffff] hover:-translate-y-1 hover:shadow-[4px_4px_0px_#000000] transition-all">
                 <h3 className="font-black text-xl uppercase mb-1 text-[#2A9D8F]">Moderator Ceremony</h3>
@@ -400,6 +498,89 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Certifications Section */}
+      <section id="certificates" className="w-full bg-[#1D3557] border-b-[3px] border-[#000000] p-8 md:p-16">
+        <div className="max-w-[1240px] mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <span className="px-3 py-1 bg-[#F1C40F] border-[2px] border-[#000000] shadow-[3px_3px_0px_#000000] font-bold uppercase text-[#000000]">KREDENSIAL</span>
+            <h2 className="text-3xl font-black uppercase text-white">SERTIFIKASI &amp; LISENSI</h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certificates.map((cert) => (
+              <div 
+                key={cert.id} 
+                className="bg-[#ffffff] border-[3px] border-[#000000] p-4 flex flex-col hover:-translate-y-2 shadow-[8px_8px_0px_#000000] transition-transform cursor-pointer group"
+                onClick={() => setSelectedCert(cert)}
+              >
+                <div className="w-full aspect-[4/3] bg-[#f5f5f5] border-[2px] border-[#000000] mb-3 overflow-hidden relative flex items-center justify-center p-2">
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title} 
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy" 
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="bg-[#E63946] text-white font-bold text-xs px-3 py-1.5 border-2 border-black shadow-[2px_2px_0px_#000000]">
+                      ZOOM SERTIFIKAT
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <span className={`${cert.issuerBadge} px-2 py-0.5 uppercase font-bold text-[11px] border-[2px] border-black`}>
+                    {cert.issuer}
+                  </span>
+                  <span className="text-xs font-bold text-gray-600">{cert.date}</span>
+                </div>
+                <h3 className="font-black text-lg text-black uppercase leading-tight line-clamp-2 mb-2">{cert.title}</h3>
+                <button className="w-full py-2 bg-[#F1C40F] text-black font-black uppercase text-xs border-[2px] border-black shadow-[2px_2px_0px_#000000] hover:bg-black hover:text-white transition-colors">
+                  LIHAT SERTIFIKAT
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Modal Pop-up for Certificate */}
+        {selectedCert && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedCert(null)}>
+            <div className="bg-[#ffffff] border-[4px] border-[#000000] shadow-[12px_12px_0px_#F1C40F] max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+              <div className="sticky top-0 bg-[#E63946] border-b-[4px] border-black p-4 flex justify-between items-center z-10">
+                <div className="flex items-center gap-3">
+                  <span className="bg-black text-white text-xs font-black uppercase px-2 py-1 border border-white">{selectedCert.issuer}</span>
+                  <h2 className="text-xl md:text-2xl font-black text-white uppercase">{selectedCert.title}</h2>
+                </div>
+                <button onClick={() => setSelectedCert(null)} className="bg-black text-white font-black w-8 h-8 flex items-center justify-center border-2 border-white hover:bg-white hover:text-black transition-colors cursor-pointer">X</button>
+              </div>
+              <div className="p-6 md:p-8">
+                <div className="w-full bg-[#f4f4f4] border-[3px] border-black p-3 mb-6 flex items-center justify-center">
+                  <img src={selectedCert.image} alt={selectedCert.title} className="max-h-[60vh] w-auto object-contain" />
+                </div>
+                <div className="bg-[#F1FAEE] border-[3px] border-black p-4 mb-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-bold">
+                  <div>
+                    <span className="text-gray-500 block uppercase">Penerbit:</span>
+                    <span className="text-black text-sm">{selectedCert.issuer}</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 block uppercase">Tanggal Terbit:</span>
+                    <span className="text-black text-sm">{selectedCert.date}</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-500 block uppercase">ID Kredensial:</span>
+                    <span className="text-black text-sm font-mono bg-white px-2 py-0.5 border border-black inline-block">{selectedCert.credentialId}</span>
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <button onClick={() => setSelectedCert(null)} className="font-bold uppercase px-6 py-3 bg-[#000000] text-[#ffffff] border-[3px] border-black shadow-[4px_4px_0px_#E63946] hover:translate-y-0.5 hover:translate-x-0.5 hover:shadow-none transition-all cursor-pointer">
+                    TUTUP
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
 
       {/* Contact Section */}
       <section className="w-full bg-[#a394f4] border-b-[3px] border-[#000000] p-8 md:p-16 relative">
