@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aulia Rumi Siregar | Web Resume",
   description: "Web Resume dan Portofolio milik Aulia Rumi Siregar. Mahasiswa Informatika & Visual Designer.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

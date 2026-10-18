@@ -9,9 +9,9 @@ export default function Home() {
   const scrollPoster = (dir: 'left' | 'right') => {
     posterScrollRef.current?.scrollBy({ left: dir === 'right' ? 320 : -320, behavior: 'smooth' });
   };
-  const posterItems = ['/poster/10.png','/poster/21.5 crew.png','/poster/Aulia Rumi Siregar_Pandangan Al-Quran_Mengelola Waktu dan prioritas.png','/poster/AWAY MADURA.png','/poster/AWAYDAYS TANGERANG.png','/poster/bagaimana jika 2.jpg','/poster/belongs old.png','/poster/CHAPTER 1 BLNKG.png','/poster/CHAPTER 1 DPN.png','/poster/CHOOSE YOU.png','/poster/DS ATAS BAWAH.png','/poster/elang jawa selalu.png','/poster/FOREVER CHANTING FOREVER STANDING.png','/poster/GONZALES.png','/poster/i\'m ready.png','/poster/IBU KOTA PERIANGAN.png','/poster/kaos putih lemon.png','/poster/kaos putih.png','/poster/KEMEJA PDL HITAM UTY.png','/poster/KOLASE DIGDAYASEMBADA - MENCINTAI KOTA DAN KLUB TANPA SYARAT.png','/poster/MENOLAK LUPA TRAGEDI 1.png','/poster/MF ULTRAS.png','/poster/NAMOY NOBAR IND v ARB.png','/poster/POSTER RETRO CAMPING.png','/poster/POSTINGAN 12 TV RUSAK.png','/poster/POSTINGAN 13 GAGAK.png','/poster/POSTINGAN 19 BUNGA.png','/poster/POSTINGAN 21 SAKIT KEPALA.png','/poster/PRICELIST FREE FIRE.png','/poster/PSMS IS DOPAMINE.png','/poster/SENT TO ME FROM HEAVEN SALLY CINNAMON.png','/poster/snapgram 2.png','/poster/snapgram 3.png','/poster/STIKER 3.png','/poster/STIKER AWAY HITAM.png','/poster/SVC_Aulia Rumi Siregar_Katalisator Menuju Indonesia Emas 2045 Melalui Era Digitalisasi..png','/poster/TES LOGO 4.png','/poster/TES LOGO 6.png','/poster/wastu 2.png','/poster/wastu 3.png','/poster/YOFALAB DESAIN 1.png','/poster/YOFALAB DESAIN 2.png','/poster/YOFALAB DESAIN 3.png'];
+  const posterItems = ['/poster/10.webp','/poster/21.5 crew.webp','/poster/Aulia Rumi Siregar_Pandangan Al-Quran_Mengelola Waktu dan prioritas.webp','/poster/AWAY MADURA.webp','/poster/AWAYDAYS TANGERANG.webp','/poster/bagaimana jika 2.webp','/poster/belongs old.webp','/poster/CHAPTER 1 BLNKG.webp','/poster/CHAPTER 1 DPN.webp','/poster/CHOOSE YOU.webp','/poster/DS ATAS BAWAH.webp','/poster/elang jawa selalu.webp','/poster/FOREVER CHANTING FOREVER STANDING.webp','/poster/GONZALES.webp','/poster/im ready.webp','/poster/IBU KOTA PERIANGAN.webp','/poster/kaos putih lemon.webp','/poster/kaos putih.webp','/poster/KEMEJA PDL HITAM UTY.webp','/poster/KOLASE DIGDAYASEMBADA - MENCINTAI KOTA DAN KLUB TANPA SYARAT.webp','/poster/MENOLAK LUPA TRAGEDI 1.webp','/poster/MF ULTRAS.webp','/poster/NAMOY NOBAR IND v ARB.webp','/poster/POSTER RETRO CAMPING.webp','/poster/POSTINGAN 12 TV RUSAK.webp','/poster/POSTINGAN 13 GAGAK.webp','/poster/POSTINGAN 19 BUNGA.webp','/poster/POSTINGAN 21 SAKIT KEPALA.webp','/poster/PRICELIST FREE FIRE.webp','/poster/PSMS IS DOPAMINE.webp','/poster/SENT TO ME FROM HEAVEN SALLY CINNAMON.webp','/poster/snapgram 2.webp','/poster/snapgram 3.webp','/poster/STIKER 3.webp','/poster/STIKER AWAY HITAM.webp','/poster/SVC_Aulia Rumi Siregar_Katalisator Menuju Indonesia Emas 2045 Melalui Era Digitalisasi.webp','/poster/TES LOGO 4.webp','/poster/TES LOGO 6.webp','/poster/wastu 2.webp','/poster/wastu 3.webp','/poster/YOFALAB DESAIN 1.webp','/poster/YOFALAB DESAIN 2.webp','/poster/YOFALAB DESAIN 3.webp'];
 
-  const sosmedItems = ['/sosmed/1.png','/sosmed/2.png','/sosmed/3.png','/sosmed/312.png','/sosmed/4.png','/sosmed/49 TH PSS.png','/sosmed/5.png','/sosmed/a.png','/sosmed/a1.png','/sosmed/a2.png','/sosmed/a3.png','/sosmed/a4.png','/sosmed/a5.png','/sosmed/a6.png','/sosmed/a7.png','/sosmed/a8.png','/sosmed/a9.png','/sosmed/AWAY KEDIRI.png','/sosmed/AWAY VS PERSITA.png','/sosmed/b.png','/sosmed/bagaimana jika 1.png','/sosmed/c.png','/sosmed/d.png','/sosmed/e.png','/sosmed/f.png','/sosmed/feed-ig-bang-farros_01.jpg','/sosmed/g.png','/sosmed/h.png','/sosmed/i.png','/sosmed/j.png','/sosmed/k.png','/sosmed/l.png','/sosmed/m.png','/sosmed/NAMOY NOBAR IND v ARB.png','/sosmed/o.png','/sosmed/ORIGINAL MAGUWO 1.png','/sosmed/p.png','/sosmed/q.png','/sosmed/r.png','/sosmed/RUMAH 1.png','/sosmed/s.png','/sosmed/snapgram 1.png','/sosmed/t.png','/sosmed/u.png','/sosmed/v.png','/sosmed/VOL 1.png','/sosmed/vs arema.png','/sosmed/VS BARITO PUTERA.png','/sosmed/VS BORNEO.png','/sosmed/VS MALUT.png','/sosmed/VS PERSEKAT.png','/sosmed/VS PERSIKU.png','/sosmed/VS SEMEN PADANG.png','/sosmed/w.png','/sosmed/x.png','/sosmed/y.png','/sosmed/z.png'];
+  const sosmedItems = ['/sosmed/1.webp','/sosmed/2.webp','/sosmed/3.webp','/sosmed/312.webp','/sosmed/4.webp','/sosmed/49 TH PSS.webp','/sosmed/5.webp','/sosmed/a.webp','/sosmed/a1.webp','/sosmed/a2.webp','/sosmed/a3.webp','/sosmed/a4.webp','/sosmed/a5.webp','/sosmed/a6.webp','/sosmed/a7.webp','/sosmed/a8.webp','/sosmed/a9.webp','/sosmed/AWAY KEDIRI.webp','/sosmed/AWAY VS PERSITA.webp','/sosmed/b.webp','/sosmed/bagaimana jika 1.webp','/sosmed/c.webp','/sosmed/d.webp','/sosmed/e.webp','/sosmed/f.webp','/sosmed/feed-ig-bang-farros_01.webp','/sosmed/g.webp','/sosmed/h.webp','/sosmed/i.webp','/sosmed/j.webp','/sosmed/k.webp','/sosmed/l.webp','/sosmed/m.webp','/sosmed/NAMOY NOBAR IND v ARB.webp','/sosmed/o.webp','/sosmed/ORIGINAL MAGUWO 1.webp','/sosmed/p.webp','/sosmed/q.webp','/sosmed/r.webp','/sosmed/RUMAH 1.webp','/sosmed/s.webp','/sosmed/snapgram 1.webp','/sosmed/t.webp','/sosmed/u.webp','/sosmed/v.webp','/sosmed/VOL 1.webp','/sosmed/vs arema.webp','/sosmed/VS BARITO PUTERA.webp','/sosmed/VS BORNEO.webp','/sosmed/VS MALUT.webp','/sosmed/VS PERSEKAT.webp','/sosmed/VS PERSIKU.webp','/sosmed/VS SEMEN PADANG.webp','/sosmed/w.webp','/sosmed/x.webp','/sosmed/y.webp','/sosmed/z.webp'];
   
   
 
@@ -21,16 +21,16 @@ export default function Home() {
       id: "bbqride",
       title: "BBQ RIDE BANDUNG 2026",
       tech: "Laravel, Flutter, MySQL",
-      image: "/website/1.png",
+      image: "/website/1.webp",
       images: [
-        "/website/1.png",
-        "/website/2.png",
-        "/website/3.png",
-        "/website/4.png",
-        "/website/5.png",
-        "/website/6.png",
-        "/website/7.png",
-        "/website/8.png"
+        "/website/1.webp",
+        "/website/2.webp",
+        "/website/3.webp",
+        "/website/4.webp",
+        "/website/5.webp",
+        "/website/6.webp",
+        "/website/7.webp",
+        "/website/8.webp"
       ],
       desc: "Sistem Manajemen Akses Pengunjung dan Digitalisasi Katalog Pameran untuk event BBQ Ride Bandung. Dibangun dengan arsitektur REST API yang mengintegrasikan Dashboard Web (Admin) dan Aplikasi Mobile (Petugas & Pengunjung).",
       features: [
@@ -45,13 +45,13 @@ export default function Home() {
       id: "kasir",
       title: "MODERN WEB POS (POINT OF SALE)",
       tech: "HTML5, Tailwind CSS, Vanilla JS",
-      image: "/website/kasir1.png",
+      image: "/website/kasir1.webp",
       images: [
-        "/website/kasir1.png",
-        "/website/kasir2.png",
-        "/website/kasir3.png",
-        "/website/kasir4.png",
-        "/website/kasir5.png"
+        "/website/kasir1.webp",
+        "/website/kasir2.webp",
+        "/website/kasir3.webp",
+        "/website/kasir4.webp",
+        "/website/kasir5.webp"
       ],
       desc: "Aplikasi Kasir (Point of Sale) interaktif bergaya modern yang dirancang khusus untuk mempercepat proses transaksi ritel dan UMKM. Dibangun sepenuhnya menggunakan arsitektur Frontend murni (Client-side) yang memanfaatkan LocalStorage API untuk manajemen state, menghasilkan aplikasi yang sangat responsif, ringan, dan dapat berjalan mulus tanpa ketergantungan pada server (Offline-capable).",
       features: [
@@ -72,7 +72,7 @@ export default function Home() {
       issuerBadge: "bg-[#2A9D8F] text-white",
       date: "16 Oktober 2026",
       credentialId: "4EE858C3605B",
-      image: "/sertifikat/cert_software_engineer.png",
+      image: "/sertifikat/cert_software_engineer.webp",
       category: "Software Engineering",
       desc: "Sertifikasi resmi kompetensi Software Engineer dari HackerRank yang menguji pemecahan masalah (problem solving), struktur data, algoritma, dan logika rekayasa perangkat lunak."
     },
@@ -83,7 +83,7 @@ export default function Home() {
       issuerBadge: "bg-[#2A9D8F] text-white",
       date: "17 Oktober 2026",
       credentialId: "F178C0830A4D",
-      image: "/sertifikat/cert_css.png",
+      image: "/sertifikat/cert_css.webp",
       category: "Frontend Development",
       desc: "Sertifikasi pengujian kemahiran dasar CSS dari HackerRank yang mencakup styling antarmuka web, tata letak modern (layouting), cascading, dan responsivitas UI."
     },
@@ -94,7 +94,7 @@ export default function Home() {
       issuerBadge: "bg-[#E63946] text-white",
       date: "16 Oktober 2026",
       credentialId: "484543004",
-      image: "/sertifikat/cert_google_marketing.png",
+      image: "/sertifikat/cert_google_marketing.webp",
       category: "Digital Marketing",
       desc: "Akreditasi resmi dari Google Digital Garage mengenai strategi pemasaran digital, analisis audiens, media sosial, dan kampanye digital interaktif."
     },
@@ -105,7 +105,7 @@ export default function Home() {
       issuerBadge: "bg-[#1D3557] text-white",
       date: "5 Januari 2025",
       credentialId: "DA0101EN",
-      image: "/sertifikat/cert_ibm_python.png",
+      image: "/sertifikat/cert_ibm_python.webp",
       category: "Data Analytics",
       desc: "Sertifikasi penyelesaian kursus dari Cognitive Class powered by IBM Developer Skills Network dalam pengolahan dan analisis data menggunakan bahasa pemrograman Python."
     },
@@ -116,7 +116,7 @@ export default function Home() {
       issuerBadge: "bg-[#F1C40F] text-black",
       date: "English Training Program",
       credentialId: "KII / Certified",
-      image: "/sertifikat/cert_karya_inspirasi.png",
+      image: "/sertifikat/cert_karya_inspirasi.webp",
       category: "English Proficiency",
       desc: ""
     },
@@ -127,7 +127,7 @@ export default function Home() {
       issuerBadge: "bg-[#2A9D8F] text-white",
       date: "13 Juni 2023",
       credentialId: "SK: 420/6476/PLS/2006",
-      image: "/sertifikat/cert_aec_english.png",
+      image: "/sertifikat/cert_aec_english.webp",
       category: "English Proficiency",
       desc: ""
     },
@@ -138,7 +138,7 @@ export default function Home() {
       issuerBadge: "bg-[#E63946] text-white",
       date: "32 Jam Pelatihan",
       credentialId: "Kemendikbud / Google Workspace",
-      image: "/sertifikat/cert_google_workspace.png",
+      image: "/sertifikat/cert_google_workspace.webp",
       category: "Digital Tools & Productivity",
       desc: ""
     }
@@ -182,20 +182,20 @@ export default function Home() {
       <div className="w-full bg-[#F3722C] border-b-[3px] border-[#000000] overflow-hidden py-2 select-none">
         <div className="flex whitespace-nowrap animate-marquee gap-8 text-[#ffffff] uppercase font-bold tracking-wider items-center">
 
-            <span className="flex items-center gap-2"><img src="/skills/graphic-design.png" className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
-            <span className="flex items-center gap-2"><img src="/skills/prototype.png" className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
-            <span className="flex items-center gap-2"><img src="/skills/illustration.png" className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
-            <span className="flex items-center gap-2"><img src="/skills/sketch.png" className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
+            <span className="flex items-center gap-2"><img src="/skills/graphic-design.webp" width={24} height={24} className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
+            <span className="flex items-center gap-2"><img src="/skills/prototype.webp" width={24} height={24} className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
+            <span className="flex items-center gap-2"><img src="/skills/illustration.webp" width={24} height={24} className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
+            <span className="flex items-center gap-2"><img src="/skills/sketch.webp" width={24} height={24} className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
 
-            <span className="flex items-center gap-2"><img src="/skills/graphic-design.png" className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
-            <span className="flex items-center gap-2"><img src="/skills/prototype.png" className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
-            <span className="flex items-center gap-2"><img src="/skills/illustration.png" className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
-            <span className="flex items-center gap-2"><img src="/skills/sketch.png" className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
+            <span className="flex items-center gap-2"><img src="/skills/graphic-design.webp" width={24} height={24} className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
+            <span className="flex items-center gap-2"><img src="/skills/prototype.webp" width={24} height={24} className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
+            <span className="flex items-center gap-2"><img src="/skills/illustration.webp" width={24} height={24} className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
+            <span className="flex items-center gap-2"><img src="/skills/sketch.webp" width={24} height={24} className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
 
-            <span className="flex items-center gap-2"><img src="/skills/graphic-design.png" className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
-            <span className="flex items-center gap-2"><img src="/skills/prototype.png" className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
-            <span className="flex items-center gap-2"><img src="/skills/illustration.png" className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
-            <span className="flex items-center gap-2"><img src="/skills/sketch.png" className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
+            <span className="flex items-center gap-2"><img src="/skills/graphic-design.webp" width={24} height={24} className="w-6 h-6" alt="" /> VISUAL & KONTEN SOSMED</span>
+            <span className="flex items-center gap-2"><img src="/skills/prototype.webp" width={24} height={24} className="w-6 h-6" alt="" /> WEB & PENGOLAHAN DATA</span>
+            <span className="flex items-center gap-2"><img src="/skills/illustration.webp" width={24} height={24} className="w-6 h-6" alt="" /> 100+ PROYEK DESAIN</span>
+            <span className="flex items-center gap-2"><img src="/skills/sketch.webp" width={24} height={24} className="w-6 h-6" alt="" /> OPEN FOR FREELANCE</span>
 
           </div>
       </div>
@@ -245,7 +245,7 @@ export default function Home() {
             <div className="lg:col-span-5 flex justify-center items-center">
               <div className="bg-[#ffffff] p-4 border-[3px] border-[#000000] shadow-[6px_6px_0px_#000000] transform -rotate-3 hover:rotate-0 transition-transform duration-300 w-full max-w-[320px]">
                 <div className="w-full aspect-square bg-[#000000] border-[2px] border-[#000000] overflow-hidden relative">
-                  <img src="/profile.jpeg" alt="Aulia Rumi" className="w-full h-full object-cover" />
+                  <img src="/profile.webp" alt="Aulia Rumi" width={320} height={320} fetchPriority="high" decoding="sync" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function Home() {
             {webProjects.map((project) => (
               <div key={project.id} className="bg-[#ffffff] border-[3px] border-[#000000] p-4 flex flex-col hover:-translate-y-2 shadow-[8px_8px_0px_#000000] transition-transform cursor-pointer" onClick={() => setSelectedWeb(project)}>
                 <div className="w-full h-48 bg-[#f0f0f0] border-[3px] border-[#000000] mb-4 overflow-hidden relative group">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
+                  <img src={project.image} alt={project.title} width={400} height={200} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onError={(e) => { e.currentTarget.style.display = 'none'; }} />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <span className="bg-[#E63946] text-white font-bold px-4 py-2 border-2 border-black">LIHAT DETAIL</span>
                   </div>
@@ -314,7 +314,7 @@ export default function Home() {
               {/* Image Gallery Scroll */}
               <div className="flex overflow-x-auto gap-4 pb-4 mb-6 snap-x">
                 {selectedWeb.images ? selectedWeb.images.map((img, i) => (
-                  <img key={i} src={img} alt={selectedWeb.title + " " + i} className="w-[85%] md:w-[70%] h-64 md:h-[400px] shrink-0 object-contain border-[3px] border-black shadow-[4px_4px_0px_#000000] snap-center bg-black" loading="lazy" />
+                  <img key={i} src={img} alt={selectedWeb.title + " " + i} width={600} height={400} className="w-[85%] md:w-[70%] h-64 md:h-[400px] shrink-0 object-contain border-[3px] border-black shadow-[4px_4px_0px_#000000] snap-center bg-black" loading="lazy" />
                 )) : (
                   <img src={selectedWeb.image} alt={selectedWeb.title} className="w-full h-auto border-[3px] border-black shadow-[4px_4px_0px_#000000]" />
                 )}
@@ -351,7 +351,7 @@ export default function Home() {
                 <div ref={posterScrollRef} className="flex w-full h-full overflow-x-auto snap-x snap-mandatory hide-scrollbar">
                   {posterItems.map((src, i) => (
                     <div key={i} className="shrink-0 w-auto h-full snap-center mr-2 border-r-2 border-black">
-                      <img src={src} className="h-full w-auto object-cover" alt="Poster" loading="lazy" />
+                      <img src={src} width={200} height={224} className="h-full w-auto object-cover" alt="Poster" loading="lazy" />
                     </div>
                   ))}
                 </div>
@@ -374,7 +374,7 @@ export default function Home() {
                   const isNext = idx === (sosmedIndex + 1) % sosmedItems.length;
                   if (!isActive && !isPrev && !isNext) return null;
                   return (
-                    <img key={idx} src={src} className={`absolute w-auto h-full object-cover border-4 border-black transition-all duration-300 ${isActive ? 'z-20 scale-100 rotate-0 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]' : 'z-10 scale-90 opacity-40 blur-[2px]'}`} style={{ transform: isActive ? '' : isPrev ? 'translateX(-30%) rotate(-5deg)' : 'translateX(30%) rotate(5deg)' }} alt="Sosmed" loading="lazy" />
+                    <img key={idx} src={src} className={`absolute w-auto h-full object-cover border-4 border-black transition-all duration-300 ${isActive ? 'z-20 scale-100 rotate-0 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]' : 'z-10 scale-90 opacity-40 blur-[2px]'}`} style={{ transform: isActive ? '' : isPrev ? 'translateX(-30%) rotate(-5deg)' : 'translateX(30%) rotate(5deg)' }} width={224} height={224} alt="Sosmed" loading="lazy" />
                   );
                 })}
               </div>
@@ -465,19 +465,19 @@ export default function Home() {
               <p className="font-black uppercase mb-4 bg-black text-white inline-block px-3 py-1 text-lg">Hard Skills</p>
               <div className="flex flex-wrap gap-4">
                 {[
-                  { name: 'CapCut', file: 'capcut.png' },
-                  { name: 'Premiere', file: 'premiere.png' },
-                  { name: 'Canva', file: 'canva.png' },
-                  { name: 'Photoshop', file: 'photoshop.png' },
-                  { name: 'Illustrator', file: 'illustrator.png' },
-                  { name: 'Word', file: 'word.png' },
-                  { name: 'Excel', file: 'excel.png' },
-                  { name: 'Sheets', file: 'sheets.png' },
-                    { name: 'VS Code', file: 'vscode.png' },
-                    { name: 'Notion', file: 'notion.png' }
+                  { name: 'CapCut', file: 'capcut.webp' },
+                  { name: 'Premiere', file: 'premiere.webp' },
+                  { name: 'Canva', file: 'canva.webp' },
+                  { name: 'Photoshop', file: 'photoshop.webp' },
+                  { name: 'Illustrator', file: 'illustrator.webp' },
+                  { name: 'Word', file: 'word.webp' },
+                  { name: 'Excel', file: 'excel.webp' },
+                  { name: 'Sheets', file: 'sheets.webp' },
+                    { name: 'VS Code', file: 'vscode.webp' },
+                    { name: 'Notion', file: 'notion.webp' }
                 ].map(skill => (
                   <div key={skill.name} className="bg-[#ffffff] border-[3px] border-[#000000] shadow-[4px_4px_0px_#000000] hover:-translate-y-1 transition-transform flex flex-col items-center justify-center w-20 h-20 group relative cursor-help">
-                    <img src={`/skills/${skill.file}`} alt={skill.name} className="w-10 h-10 object-contain" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden'); }} />
+                    <img src={`/skills/${skill.file}`} alt={skill.name} width={40} height={40} className="w-10 h-10 object-contain" loading="lazy" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden'); }} />
                     <span className="text-xs font-bold text-center leading-tight hidden text-black px-1">{skill.name}</span>
                     <span className="absolute -top-10 bg-black text-white text-xs font-bold px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border-2 border-black shadow-[2px_2px_0px_#ffffff] z-10">
                       {skill.name}
@@ -518,6 +518,8 @@ export default function Home() {
                   <img 
                     src={cert.image} 
                     alt={cert.title} 
+                    width={400} 
+                    height={300} 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     loading="lazy" 
                   />
@@ -555,7 +557,7 @@ export default function Home() {
               </div>
               <div className="p-6 md:p-8">
                 <div className="w-full bg-[#f4f4f4] border-[3px] border-black p-3 mb-6 flex items-center justify-center">
-                  <img src={selectedCert.image} alt={selectedCert.title} className="max-h-[60vh] w-auto object-contain" />
+                  <img src={selectedCert.image} alt={selectedCert.title} width={800} height={600} className="max-h-[60vh] w-auto object-contain" />
                 </div>
                 <div className="bg-[#F1FAEE] border-[3px] border-black p-4 mb-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-bold">
                   <div>
