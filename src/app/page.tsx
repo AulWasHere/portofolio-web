@@ -237,7 +237,7 @@ export default function Home() {
                 <button className="font-bold uppercase px-6 py-4 bg-[#E63946] text-[#ffffff] border-[3px] border-[#000000] shadow-[5px_5px_0px_#000000] hover:translate-y-1 hover:translate-x-1 hover:shadow-[0px_0px_0px_#000000] transition-all" onClick={() => document.getElementById('web-apps')?.scrollIntoView({ behavior: 'smooth' })}>
                     LIHAT KARYA
                   </button>
-                <a href="/CV_Aulia_Rumi_Siregar.pdf" download="CV AULIA RUMI SIREGAR.pdf" target="_blank" rel="noopener noreferrer" onClick={handleDownloadCV} className="font-bold uppercase px-6 py-4 bg-[#F1C40F] text-[#000000] border-[3px] border-[#000000] shadow-[5px_5px_0px_#000000] hover:translate-y-1 hover:translate-x-1 hover:shadow-[0px_0px_0px_#000000] transition-all flex items-center justify-center inline-block">
+                <a href="/CV_Aulia_Rumi_Siregar_2026.pdf" download="CV AULIA RUMI SIREGAR.pdf" target="_blank" rel="noopener noreferrer" onClick={handleDownloadCV} className="font-bold uppercase px-6 py-4 bg-[#F1C40F] text-[#000000] border-[3px] border-[#000000] shadow-[5px_5px_0px_#000000] hover:translate-y-1 hover:translate-x-1 hover:shadow-[0px_0px_0px_#000000] transition-all flex items-center justify-center inline-block">
                 UNDUH CV [PDF]
               </a>
               </div>
