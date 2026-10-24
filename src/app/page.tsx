@@ -60,6 +60,27 @@ export default function Home() {
         "Dynamic Receipt Generator: Pembuatan struk transaksi digital secara dinamis yang mencatat detail pesanan, waktu transaksi (real-time), dan otomatis memformat mata uang (IDR).",
         "Sales History & Reporting: Pencatatan riwayat seluruh transaksi secara persisten dengan fitur rekapitulasi dan pencetakan laporan penjualan (Print-ready/PDF)."
       ]
+    },
+    {
+      id: "jadwalkampus",
+      title: "JADWALKAMPUS – TIMETABLE BUILDER",
+      tech: "React 19, TypeScript, Tailwind CSS, PWA",
+      image: "/website/jadwal3.webp",
+      images: [
+        "/website/jadwal3.webp",
+        "/website/jadwal4.webp",
+        "/website/jadwal2.webp",
+        "/website/jadwal5.webp",
+        "/website/jadwal6.webp",
+        "/website/jadwal1.webp"
+      ],
+      desc: "Aplikasi web produktivitas mahasiswa berbasis Light Mode Editorial untuk menyusun jadwal perkuliahan mingguan secara interaktif, mendeteksi bentrok jam kuliah otomatis secara real-time, dan mengekspor jadwal menjadi Wallpaper Lockscreen HP (9:16) serta dokumen cetak PDF A4.",
+      features: [
+        "Smart Clash Detector: Algoritma validasi bentrok jadwal kuliah real-time dengan highlight visual terracotta dan pola arsiran diagonal.",
+        "Lockscreen Studio (9:16): Generator wallpaper jadwal HP rasio 9:16 dengan 4 tema warna editorial dan pelindung safe-area jam ponsel.",
+        "Ekspor Akademik Multiformat: Mendukung ekspor dokumen PDF Editorial A4 Landscape dan sinkronisasi iCalendar (.ics) ke Google Calendar / Apple Calendar.",
+        "Local-First & PWA Offline: Dirancang zero-database dengan penyimpanan persisten di LocalStorage serta dapat diakses secara offline sebagai Progressive Web App."
+      ]
     }
   ];
     const [selectedWeb, setSelectedWeb] = useState<typeof webProjects[0] | null>(null);
@@ -164,7 +185,7 @@ export default function Home() {
 
   return (
     <ClickSpark sparkColor="#E63946" sparkSize={16} sparkRadius={30} sparkCount={12} duration={600} easing="ease-out" extraScale={1.3}>
-    <div className="font-sans text-[#000000]">
+    <div className="font-sans text-[#000000] overflow-x-hidden w-full">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -535,8 +556,10 @@ export default function Home() {
                   </span>
                   <span className="text-xs font-bold text-gray-600">{cert.date}</span>
                 </div>
-                <h3 className="font-black text-lg text-black uppercase leading-tight line-clamp-2 mb-2">{cert.title}</h3>
-                <button className="w-full py-2 bg-[#F1C40F] text-black font-black uppercase text-xs border-[2px] border-black shadow-[2px_2px_0px_#000000] hover:bg-black hover:text-white transition-colors">
+                <div className="min-h-[3rem] flex items-center mb-3">
+                  <h3 className="font-black text-lg text-black uppercase leading-tight line-clamp-2">{cert.title}</h3>
+                </div>
+                <button className="w-full py-2 bg-[#F1C40F] text-black font-black uppercase text-xs border-[2px] border-black shadow-[2px_2px_0px_#000000] hover:bg-black hover:text-white transition-colors mt-auto">
                   LIHAT SERTIFIKAT
                 </button>
               </div>
@@ -585,9 +608,9 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full bg-[#a394f4] border-b-[3px] border-[#000000] p-8 md:p-16 relative">
-        <div className="max-w-[1000px] mx-auto bg-[#ffffff] border-[3px] border-[#000000] shadow-[8px_8px_0px_#000000] p-8 md:p-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase mb-6 text-[#000000]">MARI BERKOLABORASI</h2>
+      <section className="w-full bg-[#a394f4] border-b-[3px] border-[#000000] px-4 py-12 sm:px-8 sm:py-16 md:p-16 relative">
+        <div className="max-w-[1000px] mx-auto bg-[#ffffff] border-[3px] border-[#000000] shadow-[6px_6px_0px_#000000] md:shadow-[8px_8px_0px_#000000] p-6 sm:p-8 md:p-12 text-center">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase mb-4 sm:mb-6 text-[#000000] tracking-tight leading-tight">MARI BERKOLABORASI</h2>
           <p className="text-lg md:text-xl font-medium text-[#333333] mb-10 max-w-2xl mx-auto">
             Punya ide proyek menarik atau butuh bantuan untuk desain grafis dan website? Jangan ragu untuk menghubungi saya!
           </p>
@@ -615,7 +638,7 @@ export default function Home() {
     </div>
     
       {/* Toast Notification */}
-      <div className={`fixed bottom-8 right-8 z-50 bg-[#2A9D8F] text-[#ffffff] border-[4px] border-[#000000] p-6 max-w-sm transition-all duration-500 shadow-[8px_8px_0px_#000000] ${showToast ? 'translate-x-0 opacity-100' : 'translate-x-[150%] opacity-0'}`}>
+      <div className={`fixed bottom-8 right-8 z-50 bg-[#2A9D8F] text-[#ffffff] border-[4px] border-[#000000] p-6 max-w-sm transition-all duration-500 shadow-[8px_8px_0px_#000000] ${showToast ? 'translate-x-0 opacity-100' : 'translate-x-[150%] opacity-0 pointer-events-none invisible'}`}>
         <div className="flex items-start gap-4">
           <span className="text-4xl animate-bounce">📄</span>
           <div>
